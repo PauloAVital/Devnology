@@ -26,3 +26,16 @@ Teste para vaga FullStack
 ---
 
 10. Acesse o **_http://localhost:8000/_**
+11. ![Título da imagem](public/img/BackEnd.png)
+12. Crie seu usuario para administrar o BackEnd
+13. ![Título da imagem](public/img/criar-usuario.png)
+14. Verifique os logs de consulta das Apis
+15. ![Título da imagem](public/img/log-consulta-api.png)
+
+---
+
+16. Criação do FrontEnd - React
+17. Para executar entra no diretorio **cd app-devnology**
+18. Dentro do diretório para subir o servidor react **npm start**
+19. Acesse o **http://localhost:3000/**
+20. ![Título da imagem](public/img/FrontEnd.png)
