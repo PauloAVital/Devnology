@@ -1,0 +1,628 @@
+{
+	"info": {
+		"_postman_id": "cf8361e7-3ad4-4523-a20f-c70bf9a10dd7",
+		"name": "Devnology",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8883012"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Token",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/login?email=pauloavital@gmail.com&password=123456789",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "pauloavital@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get - User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTQ3ODQ1NywiZXhwIjoxNjgxNDgyMDU3LCJuYmYiOjE2ODE0Nzg0NTcsImp0aSI6IjVtekp5WTZHZlI2UTBBMm4iLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.GDJjqG61nYzOZj29_i3D1-MU-TBJnLqNKMWAVA08UoU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/User",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert - User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTQ5MzIyMywiZXhwIjoxNjgxNDk2ODIzLCJuYmYiOjE2ODE0OTMyMjMsImp0aSI6IkxYcUl3S1JxU1QxT1FqVXAiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.0TRkcth_O12ESwURDSuTxUadovQoLzqQAvrjVACJ8g8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Paulo Antonio Vital Novo\",\n    \"email\": \"pauloavital2@gmail.com\",\n    \"password\": 123456789\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/User",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update - Use",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTQ5NTk0OCwiZXhwIjoxNjgxNDk5NTQ4LCJuYmYiOjE2ODE0OTU5NDgsImp0aSI6ImphY3dZZVZVVlI4THlVdXciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ._3Ev9P4CDzAJinla0rQp_IK1OdSYDrTEtv4ZYz1igUs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Paulo Antonio Vital update\",\n    \"email\": \"pauloavitalUP@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/User/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"User",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete - User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTQ5NTk0OCwiZXhwIjoxNjgxNDk5NTQ4LCJuYmYiOjE2ODE0OTU5NDgsImp0aSI6ImphY3dZZVZVVlI4THlVdXciLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ._3Ev9P4CDzAJinla0rQp_IK1OdSYDrTEtv4ZYz1igUs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/User/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"User",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductsBrazilian",
+			"item": [
+				{
+					"name": "get - ProductsBrazilian",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTUwMTAxOSwiZXhwIjoxNjgxNTA0NjE5LCJuYmYiOjE2ODE1MDEwMTksImp0aSI6InlOUGxyaU5XeHVuSUZBYjUiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.fkis8P00wqg5jX0nQ-n1YvTzikEHq6JXi3csB8F4M_Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/ProductBrazilian",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ProductBrazilian"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get - relation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU2MjA4NywiZXhwIjoxNjgxNTY1Njg3LCJuYmYiOjE2ODE1NjIwODcsImp0aSI6Ik0xaE05NkpsYnJSa2M4ZEwiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.F3LTOW5MjQBNkBzFSVNqjbvdSHbsFsxGCGEUZqWvHMA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/ProductBrazilian/2/relation",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ProductBrazilian",
+								"2",
+								"relation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert - ProductBrazilian",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU2MjA4NywiZXhwIjoxNjgxNTY1Njg3LCJuYmYiOjE2ODE1NjIwODcsImp0aSI6Ik0xaE05NkpsYnJSa2M4ZEwiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.F3LTOW5MjQBNkBzFSVNqjbvdSHbsFsxGCGEUZqWvHMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_shopping_cart\": 1,\n    \"nome\": \"Gorgeous Steel Chips\",\n    \"descricao\": \"New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart\",\n    \"categoria\": \"Refined\",\n    \"imagem\": \"http://placeimg.com/640/480/transport\",\n    \"preco\": \"492.00\",\n    \"material\": \"Granite\",\n    \"departamento\": \"Outdoors\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/ProductBrazilian",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ProductBrazilian"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update - ProductBrazilian",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU2MjA4NywiZXhwIjoxNjgxNTY1Njg3LCJuYmYiOjE2ODE1NjIwODcsImp0aSI6Ik0xaE05NkpsYnJSa2M4ZEwiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.F3LTOW5MjQBNkBzFSVNqjbvdSHbsFsxGCGEUZqWvHMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_shopping_cart\": 1,\n    \"nome\": \"Update - Gorgeous Steel Chips\",\n    \"descricao\": \"Update - New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart\",\n    \"categoria\": \"Refined\",\n    \"imagem\": \"http://placeimg.com/640/480/transport\",\n    \"preco\": \"562.00\",\n    \"material\": \"Granite\",\n    \"departamento\": \"Outdoors\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/ProductBrazilian/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ProductBrazilian",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete - ProductBrazilian",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU2MjA4NywiZXhwIjoxNjgxNTY1Njg3LCJuYmYiOjE2ODE1NjIwODcsImp0aSI6Ik0xaE05NkpsYnJSa2M4ZEwiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.F3LTOW5MjQBNkBzFSVNqjbvdSHbsFsxGCGEUZqWvHMA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/ProductBrazilian/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ProductBrazilian",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ShoppingCart",
+			"item": [
+				{
+					"name": "Get -ShoppingCart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU2MjA4NywiZXhwIjoxNjgxNTY1Njg3LCJuYmYiOjE2ODE1NjIwODcsImp0aSI6Ik0xaE05NkpsYnJSa2M4ZEwiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.F3LTOW5MjQBNkBzFSVNqjbvdSHbsFsxGCGEUZqWvHMA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/ShoppingCart",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ShoppingCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get - relation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU2NjQ2OCwiZXhwIjoxNjgxNTcwMDY4LCJuYmYiOjE2ODE1NjY0NjgsImp0aSI6Im1uV2h6eWg5Q3dKNEhzSWIiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.0LSGkxM44bA6kqlQtabHcrX8qLIqGmxs9qqfdcyM76Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/ShoppingCart/1/relation",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ShoppingCart",
+								"1",
+								"relation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert - ShoppingCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU1ODI0OSwiZXhwIjoxNjgxNTYxODQ5LCJuYmYiOjE2ODE1NTgyNDksImp0aSI6IkNIVlI0YmVuTDF6TEdmQkQiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.2RojRRCJFPV3q2sRakic_sBeWuPN9Lyoj9VGZ4EE7g4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_user\": 1,\n    \"qtd\": 1,\n    \"partial_value\": 200.50,\n    \"amount_discount\": 2.50,\n    \"amount\": 200.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/ShoppingCart",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ShoppingCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update - ShoppingCart",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU1ODI0OSwiZXhwIjoxNjgxNTYxODQ5LCJuYmYiOjE2ODE1NTgyNDksImp0aSI6IkNIVlI0YmVuTDF6TEdmQkQiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.2RojRRCJFPV3q2sRakic_sBeWuPN9Lyoj9VGZ4EE7g4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_user\": 1,\n    \"qtd\": 3,\n    \"partial_value\": 200.5,\n    \"amount_discount\": 2.5,\n    \"amount\": 200\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/ShoppingCart/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ShoppingCart",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete - ShoppingCart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU2MjA4NywiZXhwIjoxNjgxNTY1Njg3LCJuYmYiOjE2ODE1NjIwODcsImp0aSI6Ik0xaE05NkpsYnJSa2M4ZEwiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.F3LTOW5MjQBNkBzFSVNqjbvdSHbsFsxGCGEUZqWvHMA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/ShoppingCart/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ShoppingCart",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "productsEuropean",
+			"item": [
+				{
+					"name": "get - ProductsBrazilian",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU4MDM2NCwiZXhwIjoxNjgxNTgzOTY0LCJuYmYiOjE2ODE1ODAzNjQsImp0aSI6IklmY0pGRE5aQkNFQjdYVGMiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.QqSizbib9D_h7qGopV_8nrJmEBA-JxrsVa29JKLCvZA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/ProductEuropean",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ProductEuropean"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get - relation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU4NTI4OSwiZXhwIjoxNjgxNTg4ODg5LCJuYmYiOjE2ODE1ODUyODksImp0aSI6Ik1haDdPVWgwOE9uVmVPMDAiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.T9iK7gHLgLMoEoIivEhxqlhNjt8B1WTWf6xJLGdnG3o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/ProductEuropean/1/relation",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ProductEuropean",
+								"1",
+								"relation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert - ProductEuropean",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU4MDM2NCwiZXhwIjoxNjgxNTgzOTY0LCJuYmYiOjE2ODE1ODAzNjQsImp0aSI6IklmY0pGRE5aQkNFQjdYVGMiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.QqSizbib9D_h7qGopV_8nrJmEBA-JxrsVa29JKLCvZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n  {\n    \"id_shopping_cart\": 1,\n    \"hasDiscount\": true,\n    \"name\": \"Small Concrete Car\",\n    \"gallery\": [\n      \"http://placeimg.com/640/480/city\",\n      \"http://placeimg.com/640/480/food\",\n      \"http://placeimg.com/640/480/people\",\n      \"http://placeimg.com/640/480/abstract\"\n    ],\n    \"description\": \"The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients\",\n    \"price\": \"652.00\",\n    \"discountValue\": \"0.05\",\n    \"details\": {\n      \"adjective\": \"Sleek\",\n      \"material\": \"Cotton\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/ProductEuropean",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ProductEuropean"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update - ProductEuropean",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU4MDM2NCwiZXhwIjoxNjgxNTgzOTY0LCJuYmYiOjE2ODE1ODAzNjQsImp0aSI6IklmY0pGRE5aQkNFQjdYVGMiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.QqSizbib9D_h7qGopV_8nrJmEBA-JxrsVa29JKLCvZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"id_shopping_cart\": 1,\n    \"hasDiscount\": true,\n    \"name\": \"Awesome Wooden Fish 2\",\n    \"gallery\": [\n      \"http://aaaa\",\n      \"http://placeimg.com/640/480/abstract\",\n      \"http://bbb\",\n      \"http://placeimg.com/640/480/abstract\"\n    ],\n    \"description\": \"Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support\",\n    \"price\": \"27.00\",\n    \"discountValue\": \"0.05\",\n    \"details\": {\n      \"adjective\": \"Refined 22\",\n      \"material\": \"Concrete 22\"\n    }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/ProductEuropean/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ProductEuropean",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete - ProductEuropean",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4MTU4MDM2NCwiZXhwIjoxNjgxNTgzOTY0LCJuYmYiOjE2ODE1ODAzNjQsImp0aSI6IklmY0pGRE5aQkNFQjdYVGMiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.QqSizbib9D_h7qGopV_8nrJmEBA-JxrsVa29JKLCvZA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/ProductEuropean/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ProductEuropean",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

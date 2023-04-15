@@ -13,14 +13,11 @@ class ProductEuropean extends Migration
      */
     public function up()
     {
-        Schema::create('products-european', function (Blueprint $table) {
+        Schema::create('products_european', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_shopping_cart')->unsigned();
-            $table->foreign('id_shopping_cart')->references('id')->on('shopping-cart')->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('id_gallery')->unsigned();
-            $table->foreign('id_gallery')->references('id')->on('products-european-gallery')->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('id_details')->unsigned();
-            $table->foreign('id_details')->references('id')->on('products-european-details')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_shopping_cart')->references('id')->on('shopping_cart')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('uuid');
             $table->string('name');
             $table->text('description');
             $table->decimal('price', 5, 2);
@@ -38,6 +35,6 @@ class ProductEuropean extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products-european');
+        Schema::dropIfExists('products_european');
     }
 }

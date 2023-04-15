@@ -19,10 +19,21 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('login', 'Auth\AuthenticateControllerLogin@authenticate');
-Route::post('login-refresh', 'Auth\AuthenticateControllerLogin@refreshToken');
-Route::get('me', 'Auth\AuthenticateControllerLogin@getAuthenticatedUser');
+# Grupo Token
+Route::group(['namespace' => 'Auth'], function (){
+    Route::post('login', 'AuthenticateControllerLogin@authenticate');
+});
 
-Route::apiResource('User', 'Api\UserController');
-Route::apiResource('Products', 'Api\ProductController');
+Route::group(['namespace' => 'Api', 'middleware' => 'auth:api'], function (){
+    Route::apiResource('User', 'UserController');
+
+    Route::apiResource('ProductBrazilian', 'ProductBrazilianController');
+    Route::get('ProductBrazilian/{id}/relation', 'ProductBrazilianController@relation');
+
+    Route::apiResource('ShoppingCart', 'ShoppingCartControler');
+    Route::get('ShoppingCart/{id}/relation', 'ShoppingCartControler@relation');
+
+    Route::apiResource('ProductEuropean', 'ProductEuropeanController');
+    Route::get('ProductEuropean/{id}/relation', 'ProductEuropeanController@relation');
+});
 

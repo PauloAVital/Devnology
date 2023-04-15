@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ControleProductEuropeanGallery extends Model
 {
-    protected $table = 'products-european-gallery';
+    protected $table = 'products_european_gallery';
 
     protected $fillable = [
                             'id',
+                            'uuid',
                             'url'
                           ];
 }

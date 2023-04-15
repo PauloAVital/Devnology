@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ControleProductBrazilian extends Model
 {
-    protected $table = 'products-brazilian';
+    protected $table = 'products_brazilian';
 
     protected $fillable = [
                             'id',
@@ -23,11 +23,11 @@ class ControleProductBrazilian extends Model
     public function rules()
     {
         return [
-            'id_shopping_cart'  => 'required:products-brazilian',
-            'nome'  => 'required:products-brazilian',
-            'categoria'  => 'required:products-brazilian',
-            'preco'  => 'required:products-brazilian',
-            'departamento' => 'required|unique:products-brazilian'
+            'id_shopping_cart'  => 'required:products_brazilian',
+            'nome'  => 'required:products_brazilian',
+            'categoria'  => 'required:products_brazilian',
+            'preco'  => 'required:products_brazilian',
+            'departamento' => 'required|unique:products_brazilian'
         ];
     }
 

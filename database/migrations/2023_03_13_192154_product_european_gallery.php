@@ -13,8 +13,9 @@ class ProductEuropeanGallery extends Migration
      */
     public function up()
     {
-        Schema::create('products-european-gallery', function (Blueprint $table) {
+        Schema::create('products_european_gallery', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('uuid');
             $table->text('url');
             $table->rememberToken();
             $table->timestamps();
@@ -28,6 +29,6 @@ class ProductEuropeanGallery extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products-european-gallery');
+        Schema::dropIfExists('products_european_gallery');
     }
 }

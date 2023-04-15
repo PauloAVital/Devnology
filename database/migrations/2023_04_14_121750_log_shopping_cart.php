@@ -13,7 +13,7 @@ class LogShoppingCart extends Migration
      */
     public function up()
     {
-        Schema::create('LOG-shopping-cart', function (Blueprint $table) {
+        Schema::create('LOG_shopping_cart', function (Blueprint $table) {
             $table->Increments('id');
             $table->integer('id_user_function');
             $table->string('function', 50);
@@ -33,6 +33,6 @@ class LogShoppingCart extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('LOG-shopping-cart');
+        Schema::dropIfExists('LOG_shopping_cart');
     }
 }
