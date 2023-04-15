@@ -13,10 +13,10 @@ class ProductBrazilian extends Migration
      */
     public function up()
     {
-        Schema::create('products-brazilian', function (Blueprint $table) {
+        Schema::create('products_brazilian', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_shopping_cart')->unsigned();
-            $table->foreign('id_shopping_cart')->references('id')->on('shopping-cart')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_shopping_cart')->references('id')->on('shopping_cart')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nome');
             $table->text('descricao');
             $table->string('categoria', 50);
@@ -36,6 +36,6 @@ class ProductBrazilian extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products-brazilian');
+        Schema::dropIfExists('products_brazilian');
     }
 }

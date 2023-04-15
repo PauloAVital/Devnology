@@ -39,3 +39,28 @@ Teste para vaga FullStack
 18. Dentro do diretório para subir o servidor react **npm start**
 19. Acesse o **http://localhost:3000/**
 20. ![Título da imagem](public/img/FrontEnd.png)
+
+---
+
+## crie uma chave jwt SECRET
+
+21. Execute o comando: **sudo docker-compose exec app php artisan jwt:secret**
+22. Foi utilizado o JWT para autenticar os acessos a APIs
+23. ![Título da imagem](public/img/jwt-secret.png)
+
+## Desenvolvido Collection APIs RestFull
+
+24. Todas as APIs devem ser autenticadas para que possam ser acessadas, para poder iniciar o acesso as APIs desenvolvidas realize um cadastro de usuario no form do BackEnd mecionado acima.
+25. Toda Collection está dentro do projeto para ser importado para o **Postman**
+26. ![Título da imagem](public/img/collection-apis.png)
+27. Apos ser realizada a importação para o **Postman** terá toda collection abaixo conforme imagem
+28. ![Título da imagem](public/img/collection-postman.png)
+29. As Collections ShoopingCart e Products tem relações entre si, basta acessar as APIs Get com o titulo **relation**
+
+## Segurança Criada para maior controle de acesso as APIs
+30. Todas as APIs quando acessada possuem uma estrutura de gatilho para garantir o controle de acesso e o que foi realizado com elas, esse controle se encontra na base de dados pelos seguintes nomes:
+ - LOG_products_brasiliam
+ - LOG_products_european
+ - LOG_shopping_cart
+ - LOG_user
+ 31. ![Título da imagem](public/img/LOG.png)

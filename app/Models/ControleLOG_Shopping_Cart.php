@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ControleLOG_Shopping_Cart extends Model
 {
-    protected $table = 'LOG-shopping-cart';
+    protected $table = 'LOG_shopping_cart';
 
     protected $fillable = [
                             'id', 
@@ -22,13 +22,13 @@ class ControleLOG_Shopping_Cart extends Model
     public function rules()
     {
         return [
-            'id_user_function'  => 'required:LOG-shopping-cart',
-            'function'  => 'required:LOG-shopping-cart',
-            'id_user'  => 'required:LOG-shopping-cart',
-            'qtd' => 'required:LOG-shopping-cart',
-            'partial_value' => 'required:LOG-shopping-cart',
-            'amount_discount' => 'required:LOG-shopping-cart',
-            'amount' => 'required:LOG-shopping-cart',
+            'id_user_function'  => 'required:LOG_shopping_cart',
+            'function'  => 'required:LOG_shopping_cart',
+            'id_user'  => 'required:LOG_shopping_cart',
+            'qtd' => 'required:LOG_shopping_cart',
+            'partial_value' => 'required:LOG_shopping_cart',
+            'amount_discount' => 'required:LOG_shopping_cart',
+            'amount' => 'required:LOG_shopping_cart',
         ];
     }
 }

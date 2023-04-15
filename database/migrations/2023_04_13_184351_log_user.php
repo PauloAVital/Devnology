@@ -13,12 +13,12 @@ class LogUser extends Migration
      */
     public function up()
     {
-        Schema::create('LOG-user', function (Blueprint $table) {
+        Schema::create('LOG_user', function (Blueprint $table) {
             $table->Increments('id');
             $table->integer('id_user_function');
             $table->string('function', 50);
             $table->string('name');
-            $table->string('email', 100)->unique();
+            $table->string('email', 100);
             $table->string('password');
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ class LogUser extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('LOG-user');
+        Schema::dropIfExists('LOG_user');
     }
 }

@@ -13,8 +13,9 @@ class ProductEuropeanDetails extends Migration
      */
     public function up()
     {
-        Schema::create('products-european-details', function (Blueprint $table) {
+        Schema::create('products_european_details', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('uuid');
             $table->string('adjective');
             $table->string('material');
             $table->rememberToken();
@@ -29,6 +30,6 @@ class ProductEuropeanDetails extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products-european-details');
+        Schema::dropIfExists('products_european_details');
     }
 }

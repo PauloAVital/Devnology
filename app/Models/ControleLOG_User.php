@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ControleLOG_User extends Model
 {
-    protected $table = 'LOG-user';
+    protected $table = 'LOG_user';
 
     protected $fillable = [
                             'id', 
@@ -20,11 +20,11 @@ class ControleLOG_User extends Model
     public function rules()
     {
         return [
-            'id_user_function'  => 'required:LOG-user',
-            'function'  => 'required:LOG-user',
-            'name'  => 'required:LOG-user',
-            'email' => 'required|unique:LOG-user',
-            'password' => 'required|unique:LOG-user'
+            'id_user_function'  => 'required:LOG_user',
+            'function'  => 'required:LOG_user',
+            'name'  => 'required:LOG_user',
+            'email' => 'required:LOG_user',
+            'password' => 'required:LOG_user'
         ];
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ControleShoppingCart extends Model
 {
-    protected $table = 'shopping-cart';
+    protected $table = 'shopping_cart';
 
     protected $fillable = [
                             'id', 
@@ -20,11 +20,11 @@ class ControleShoppingCart extends Model
     public function rules()
     {
         return [
-            'id_user'  => 'required:shopping-cart',
-            'qtd'  => 'required:shopping-cart',
-            'partial_value'  => 'shopping-cart',
-            'amount_discount' => 'shopping-cart',
-            'amount' => 'shopping-cart'
+            'id_user'  => 'required:shopping_cart',
+            'qtd'  => 'required:shopping_cart',
+            'partial_value'  => 'required:shopping_cart',
+            'amount_discount' => 'required:shopping_cart',
+            'amount' => 'required:shopping_cart'
         ];
     }
 
@@ -32,4 +32,11 @@ class ControleShoppingCart extends Model
         return $this->hasOne('App\User', 'id', 'id_user' );
     }
 
+    public function relProducts() {
+        return $this->hasMany('App\Models\ControleProductBrazilian', 'id_shopping_cart', 'id' );
+    }
+
+    public function relProductsEuropean() {
+        return $this->hasMany('App\Models\ControleProductEuropean', 'id_shopping_cart', 'id' );
+    }
 }
