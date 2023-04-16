@@ -1,9 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #f1ebeb;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 10vmin;
+.logo {
+  height: 15vmin;
   pointer-events: none;
 }
 
@@ -14,14 +20,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -34,5 +38,169 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.menu {
+  height: 50px;
+  background-color: #f1ebeb;
+  font-family: Roboto;
+  box-shadow: 0px 0px 100px 5px;
+  display: flex;
+  width: 100%;
+}
+
+.menu h1 {
+  font-size: 18px;
+  text-align: left;
+  padding: 12.5px 0 12.5px 12.5px;
+  color: white;
+  width: 0;
+}
+
+.menu ul {
+  margin: 0 auto;
+}
+
+.menu ul li ul {
+  width: 100%;
+}
+
+.menu ul li {
+  display: inline-block;
+  width: 150px;
+  padding: 0px 30px;
+  line-height: 25px;
+  padding: 0;
+  position: relative;
+}
+
+.menu ul li a {
+  text-align: center;
+  font-size: 18px;
+}
+
+.menu a {
+  padding: 12.5px;
+  display: block;
+  text-decoration: none;
+  color: #666666;
+}
+
+.menu ul ul {
+  background-color: black;
+  position: absolute;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.menu ul ul li {
+  float: none;
+  border-bottom: solid 1px #262626;
+}
+
+.menu ul li:hover ul {
+  opacity: 1;
+}
+
+.menu ul ul a:hover {
+  transition: all 0.4s ease;
+  background-color: #262626;
+  color: white;
+}
+
+.menu a:hover {
+  transition: all 0.4s ease;
+  color: white;
+}
+
+.menu ul ul li {
+  background-color: #1a1a1a;
+}
+
+.menu ul ul a {
+  font-size: 17px;
+}
+
+.menu ul ul li a:hover ul ul ul {
+  visibility: visible;
+}
+
+
+nav {
+  margin-bottom: 10.0rem;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(224, 233, 225, 0.2);
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  float:left;
+  padding: 2%;
+}
+.card img {
+  border-radius: 8px;
+  width: 90%;
+}
+.card h1 {
+  font-size: 24px;
+}
+
+.card p {
+  font-size: 16px;
+}
+
+.price {
+  color: rgb(16, 153, 46);
+  font-size: 22px;
+}
+
+.desconto {
+  color:rgb(185, 24, 46);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.column {
+  float: left;
+  width: 10%;
+  padding: 15px 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin-top: 10%;
+  margin: 10px -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
 }

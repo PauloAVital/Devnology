@@ -26,8 +26,15 @@
                     <b>End-point para inserção de dados</b>
                     <p class="card-text">VERBO POST.</p>
                     <hr>
-                    <b>End-point para consulta de dados</b>
+                    <b>End-point para consulta de dados de uma api e apis relacionadas</b>
                     <p class="card-text">VERBO GET.</p>
+                    <p class="card-text">VERBO GET.Relation</p>
+                    <hr>
+                    <b>End-point para atualizar dados</b>
+                    <p class="card-text">VERBO PUT.</p>
+                    <hr>
+                    <b>End-point para deletar dados</b>
+                    <p class="card-text">VERBO DELETE.</p>
                 </div>
                 
             </div>
