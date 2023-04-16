@@ -64,3 +64,16 @@ Teste para vaga FullStack
  - LOG_shopping_cart
  - LOG_user
  31. ![Título da imagem](public/img/LOG.png)
+
+ ## Desenvolvimento de frontEnd - React
+
+ 32. Para acessar o ambiente FrontEnd entre no diretorio -> app-devnology **npm start**
+ 33. ![Título da imagem](public/img/react-1.png)
+ 34. Ao acessar a tela principal com o endereço **http://localhost:3000/**
+ 35. ![Título da imagem](public/img/frontEnd.png)
+
+ ---
+
+ 36. Os produtos estão dividos com **Nacionais** e **Importados** conforme pode verificar por menu
+ 37. ![Título da imagem](public/img/importado.png)
+ 38. Para filtrar os produtos por categorias basta utilizar o select
